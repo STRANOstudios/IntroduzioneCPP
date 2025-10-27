@@ -125,9 +125,15 @@
   <ItemGroup>
     <ClCompile Include="IntroCPP.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Operatori.cpp" />
+    <ClCompile Include="Puntatori.cpp" />
+    <ClCompile Include="StruttureDiControllo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroCPP.h" />
+    <ClInclude Include="Operatori.h" />
+    <ClInclude Include="Puntatori.h" />
+    <ClInclude Include="StruttureDiControllo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

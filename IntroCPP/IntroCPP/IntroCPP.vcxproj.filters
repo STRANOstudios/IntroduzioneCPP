@@ -21,9 +21,27 @@
     <ClCompile Include="main.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="Operatori.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="StruttureDiControllo.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Puntatori.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroCPP.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="Operatori.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="StruttureDiControllo.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="Puntatori.h">
       <Filter>File di origine</Filter>
     </ClInclude>
   </ItemGroup>
