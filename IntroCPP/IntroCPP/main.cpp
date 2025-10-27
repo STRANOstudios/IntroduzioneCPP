@@ -1,6 +1,8 @@
 
 #include <iostream>
 #include "IntroCPP.h"
+#include "Operatori.h"
+#include "Puntatori.h"
 
 using namespace std;
 
@@ -31,6 +33,10 @@ struct Studente {
 
 int main()
 {
+	// esempio operatore incremento
+	Mese* meseCorrente = new Mese();
+	int giorno = 0;
+
 	// Print Hello World to the console
 	cout << "Hello, C++ World!" << endl;
 
@@ -114,6 +120,32 @@ int main()
 
 
 	// Stampare dimensioni delle diverse classi create, degli array e delle stringhe
+	
+
+	// Operatori
+
+	giorno = meseCorrente->Incrementa();
+
+	cout << "Valore giorno: " << giorno << endl;
+
+	// Puntatori
+
+	Weapon* spada = new Weapon();
+
+	spada->initPointers();
+
+	delete spada;
+	spada = nullptr;
+
+	if (spada == nullptr)
+	{
+		cout << "Puntatore spada è nullptr dopo delete." << endl;
+	}
+	else
+	{
+		spada->initPointers();
+	}
+
 	
 
 	cin.get();
