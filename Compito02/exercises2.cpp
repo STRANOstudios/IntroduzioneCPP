@@ -5,6 +5,16 @@
 
 using namespace std;
 
+#pragma region Helpers
+
+template <typename T>
+void resetPointer(T*& pointer) {
+    delete pointer;
+    pointer = nullptr;
+}
+
+#pragma endregion
+
 #pragma region 1) Pointer declaration & assignment
 
 void run_ptr_basic() {
@@ -26,6 +36,8 @@ void run_ptr_modify() {
     *p_price = 149.99;
     cout << fixed << setprecision(2);
     cout << "price (after *p assign): " << price << "\n\n";
+
+    resetPointer(p_price);
 }
 
 #pragma endregion
@@ -74,6 +86,8 @@ void run_cstring_pointer() {
     char* p_word = word;   // first character
     *p_word = 'C';         // 'P' -> 'C'
     cout << "modified: " << word << "\n\n";
+
+	resetPointer(p_word);
 }
 
 #pragma endregion
@@ -85,6 +99,8 @@ void run_pointer_arith_third() {
     int numbers[] = { 1, 3, 5, 7, 9 };
     int* p_array = numbers; // decay to pointer
     cout << "third element *(p+2): " << *(p_array + 2) << "\n\n";
+
+	resetPointer(p_array);
 }
 
 #pragma endregion
@@ -100,6 +116,9 @@ void run_iterate_pointer() {
         cout << *p << " ";
     }
     cout << "\n\n";
+
+	resetPointer(p);
+	resetPointer(end);
 }
 
 #pragma endregion
@@ -113,6 +132,9 @@ void run_dynamic_new_delete() {
     cout << "value: " << *p << "\n";
     delete p;           // free
     p = nullptr;        // safety
+
+    // resetPointer(p);   // alternative
+
     cout << "deleted, p set to nullptr\n\n";
 }
 
@@ -126,8 +148,9 @@ void run_struct_pointer() {
     pt->x = 10;
     pt->y = 5;
     cout << "Punto: x=" << pt->x << ", y=" << pt->y << "\n";
-    delete pt;
-    pt = nullptr;
+    
+    resetPointer(pt);
+
     cout << "deleted\n\n";
 }
 
@@ -144,6 +167,9 @@ void run_double_pointer() {
     cout << "value via **p2: " << **p2 << "\n";
     cout << "address of a (p1): " << p1 << "\n";
     cout << "address of p1 (p2): " << p2 << "\n\n";
+
+	resetPointer(p1);
+	resetPointer(p2);
 }
 
 #pragma endregion
